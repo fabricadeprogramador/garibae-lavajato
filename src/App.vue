@@ -28,6 +28,17 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
+        <v-list-item>
+           <v-list-item-avatar>
+              <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
+            </v-list-item-avatar>
+            <v-list-item-content>
+            <v-list-item-title class="title">Empresa </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        
+
           <v-list-item>
             <v-list-item-title>Foo</v-list-item-title>
           </v-list-item>
