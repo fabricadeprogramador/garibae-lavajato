@@ -10,8 +10,12 @@
       <v-spacer></v-spacer>
       <v-btn
         text
-       
+        icon
+        to="/solicitacoes"
       >
+      <v-icon>
+        mdi-bell
+      </v-icon>
        
       </v-btn>
     </v-app-bar>
@@ -36,24 +40,17 @@
             <v-list-item-title class="title">Empresa </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
-        
-
           <v-list-item>
             <v-list-item-title>Foo</v-list-item-title>
           </v-list-item>
-
           <v-list-item>
             <v-list-item-title>Bar</v-list-item-title>
           </v-list-item>
-
-          
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-    <v-content>
       
+    <v-content>
     </v-content>
     <router-view></router-view>
   </v-app>
