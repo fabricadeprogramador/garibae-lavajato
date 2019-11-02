@@ -83,3 +83,9 @@ export default {
   },
 };
 </script>
+
+<style>
+  *{
+    font-family: 'Ubuntu', sans-serif;
+  }
+</style>
