@@ -1,36 +1,74 @@
 <template>
   <v-app>
     <v-app-bar app>
+     
+       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>Home</span>
+        
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
         text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+       
       >
-        <span class="mr-2">Latest Release</span>
+       
       </v-btn>
     </v-app-bar>
+     <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>Foo</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
 
     <v-content>
-      <HelloWorld/>
+      
     </v-content>
+    <router-view></router-view>
   </v-app>
+
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    
   },
   data: () => ({
-    //
+    drawer: false,
+    group: null,
   }),
+  methods:{
+    
+  },
+  watch: {
+    group () {
+      this.drawer = false
+    },
+  },
 };
 </script>
