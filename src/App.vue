@@ -1,9 +1,14 @@
 <template>
   <v-app>
     <v-app-bar app>
-     
-       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+     <v-btn @click=back text icon v-if="$route.path != '/'">
+         <v-icon >
+           mdi-arrow-left
+         </v-icon>
+       </v-btn>
+       <v-app-bar-nav-icon v-else @click="drawer = !drawer"></v-app-bar-nav-icon>       
       <v-toolbar-title class="headline text-uppercase">
+        
         <span>Home</span>
         
       </v-toolbar-title>
@@ -76,7 +81,9 @@ export default {
     group: null,
   }),
   methods:{
-    
+    back(){
+      history.back(-1)
+    }
   },
   watch: {
     group () {
