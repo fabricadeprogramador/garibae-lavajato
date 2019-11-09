@@ -55,10 +55,10 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-      
+
     <v-content>
+      <router-view></router-view>
     </v-content>
-    <router-view></router-view>
   </v-app>
 
   
